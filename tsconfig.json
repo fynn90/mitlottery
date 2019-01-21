@@ -3,13 +3,16 @@
     "module": "es6",
     "target": "es5",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "sourceMap": true,
     "outDir": "ts-build",
     "jsx": "react",
     "strict": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "paths":{
+      "$": ["src"]
+    },
     "lib": [
       "es6",
       "es7",
@@ -20,7 +23,8 @@
     "noImplicitThis": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
-    "removeComments": true
+    "removeComments": true,
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",

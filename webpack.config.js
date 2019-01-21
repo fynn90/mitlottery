@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '$': path.resolve(__dirname, 'src')
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
@@ -73,7 +73,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     compress: true,
-    open: true,
+    open: false,
     port: 6688,
     publicPath: "/"
   }

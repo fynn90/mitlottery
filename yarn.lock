@@ -14,6 +14,10 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@csstools/convert-colors@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
+
 "@material-ui/core@^3.9.0":
   version "3.9.0"
   resolved "https://registry.npmjs.org/@material-ui/core/-/core-3.9.0.tgz#7e74cf1979ee65f9fd388145764b3e58f48da6c6"
@@ -249,6 +253,12 @@
 "@types/redux-actions@^2.3.1":
   version "2.3.1"
   resolved "https://registry.npmjs.org/@types/redux-actions/-/redux-actions-2.3.1.tgz#b574569d76df9a0963c421bf509bcf2d0c6b17d3"
+
+"@types/redux-thunk@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/@types/redux-thunk/-/redux-thunk-2.1.0.tgz#bc2b6e972961831afb82a9bf4f06726e351f9416"
+  dependencies:
+    redux-thunk "*"
 
 "@types/redux@^3.6.0":
   version "3.6.0"
@@ -630,6 +640,17 @@ autoprefixer@^7.1.1:
     postcss "^6.0.17"
     postcss-value-parser "^3.2.3"
 
+autoprefixer@^9.4.2:
+  version "9.4.5"
+  resolved "https://registry.npmjs.org/autoprefixer/-/autoprefixer-9.4.5.tgz#a13ccb001e4bc8837f71c3354005b42f02cc03d7"
+  dependencies:
+    browserslist "^4.4.0"
+    caniuse-lite "^1.0.30000928"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^7.0.11"
+    postcss-value-parser "^3.3.1"
+
 babel-runtime@^6.23.0:
   version "6.26.0"
   resolved "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
@@ -809,6 +830,14 @@ browserslist@^2.0.0, browserslist@^2.11.3:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
+browserslist@^4.3.5, browserslist@^4.4.0:
+  version "4.4.1"
+  resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.4.1.tgz#42e828954b6b29a7a53e352277be429478a69062"
+  dependencies:
+    caniuse-lite "^1.0.30000929"
+    electron-to-chromium "^1.3.103"
+    node-releases "^1.1.3"
+
 buffer-from@^1.0.0, buffer-from@^1.1.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -894,7 +923,7 @@ caniuse-api@^2.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000918, caniuse-lite@^1.0.30000928, caniuse-lite@^1.0.30000929:
   version "1.0.30000929"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000929.tgz#7b391b781a9c3097ecc39ea053301aea8ea16317"
 
@@ -1254,6 +1283,12 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+css-blank-pseudo@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/css-blank-pseudo/-/css-blank-pseudo-0.1.4.tgz#dfdefd3254bf8a82027993674ccf35483bfcb3c5"
+  dependencies:
+    postcss "^7.0.5"
+
 css-color-function@~1.3.3:
   version "1.3.3"
   resolved "https://registry.npmjs.org/css-color-function/-/css-color-function-1.3.3.tgz#8ed24c2c0205073339fafa004bc8c141fccb282e"
@@ -1263,6 +1298,34 @@ css-color-function@~1.3.3:
     debug "^3.1.0"
     rgb "~0.1.0"
 
+css-has-pseudo@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.npmjs.org/css-has-pseudo/-/css-has-pseudo-0.10.0.tgz#3c642ab34ca242c59c41a125df9105841f6966ee"
+  dependencies:
+    postcss "^7.0.6"
+    postcss-selector-parser "^5.0.0-rc.4"
+
+css-loader@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/css-loader/-/css-loader-2.1.0.tgz#42952ac22bca5d076978638e9813abce49b8f0cc"
+  dependencies:
+    icss-utils "^4.0.0"
+    loader-utils "^1.2.1"
+    lodash "^4.17.11"
+    postcss "^7.0.6"
+    postcss-modules-extract-imports "^2.0.0"
+    postcss-modules-local-by-default "^2.0.3"
+    postcss-modules-scope "^2.0.0"
+    postcss-modules-values "^2.0.0"
+    postcss-value-parser "^3.3.0"
+    schema-utils "^1.0.0"
+
+css-prefers-color-scheme@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/css-prefers-color-scheme/-/css-prefers-color-scheme-3.1.1.tgz#6f830a2714199d4f0d0d0bb8a27916ed65cff1f4"
+  dependencies:
+    postcss "^7.0.5"
+
 css-select@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/css-select/-/css-select-1.2.0.tgz#2b3a110539c5355f1cd8d314623e870b121ec858"
@@ -1271,6 +1334,14 @@ css-select@^1.1.0:
     css-what "2.1"
     domutils "1.5.1"
     nth-check "~1.0.1"
+
+css-selector-tokenizer@^0.7.0:
+  version "0.7.1"
+  resolved "https://registry.npmjs.org/css-selector-tokenizer/-/css-selector-tokenizer-0.7.1.tgz#a177271a8bca5019172f4f891fc6eed9cbf68d5d"
+  dependencies:
+    cssesc "^0.1.0"
+    fastparse "^1.1.1"
+    regexpu-core "^1.0.0"
 
 css-unit-converter@^1.1.1:
   version "1.1.1"
@@ -1285,6 +1356,18 @@ css-vendor@^0.3.8:
 css-what@2.1:
   version "2.1.2"
   resolved "https://registry.npmjs.org/css-what/-/css-what-2.1.2.tgz#c0876d9d0480927d7d4920dcd72af3595649554d"
+
+cssdb@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/cssdb/-/cssdb-4.3.0.tgz#2e1229900616f80c66ff2d568ea2b4f92db1c78c"
+
+cssesc@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
+
+cssesc@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/cssesc/-/cssesc-2.0.0.tgz#3b13bd1bb1cb36e1bcb5a4dcd27f54c5dcb35703"
 
 csstype@^2.0.0, csstype@^2.2.0, csstype@^2.5.2:
   version "2.6.0"
@@ -1518,7 +1601,7 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-electron-to-chromium@^1.3.30:
+electron-to-chromium@^1.3.103, electron-to-chromium@^1.3.30:
   version "1.3.103"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.103.tgz#a695777efdbc419cad6cbb0e58458251302cd52f"
 
@@ -2245,6 +2328,16 @@ iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
+icss-replace-symbols@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
+
+icss-utils@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/icss-utils/-/icss-utils-4.0.0.tgz#d52cf4bcdcfa1c45c2dbefb4ffdf6b00ef608098"
+  dependencies:
+    postcss "^7.0.5"
+
 ieee754@^1.1.4:
   version "1.1.12"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.1.12.tgz#50bf24e5b9c8bb98af4964c941cdb0918da7b60b"
@@ -2558,6 +2651,10 @@ js-yaml@^3.9.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+jsesc@~0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmjs.org/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
+
 json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -2677,7 +2774,7 @@ loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.2, loader-utils@^1.1.0:
+loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.1:
   version "1.2.3"
   resolved "https://registry.npmjs.org/loader-utils/-/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
   dependencies:
@@ -2721,7 +2818,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@^4.17.10, lodash@^4.17.3, lodash@^4.17.5:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.5:
   version "4.17.11"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
@@ -3054,6 +3151,12 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
+node-releases@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.3.tgz#aad9ce0dcb98129c753f772c0aa01360fb90fbd2"
+  dependencies:
+    semver "^5.3.0"
+
 node-xlsx@^0.12.1:
   version "0.12.1"
   resolved "https://registry.npmjs.org/node-xlsx/-/node-xlsx-0.12.1.tgz#ec8cabaf66204875094ec850766fcebbcaa6ceb5"
@@ -3324,6 +3427,10 @@ path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
+path-parse@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
+
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
@@ -3344,7 +3451,7 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-pify@^2.0.0:
+pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
@@ -3414,6 +3521,13 @@ postcss-attribute-case-insensitive@^2.0.0:
     postcss "^6.0.0"
     postcss-selector-parser "^2.2.3"
 
+postcss-attribute-case-insensitive@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/postcss-attribute-case-insensitive/-/postcss-attribute-case-insensitive-4.0.1.tgz#b2a721a0d279c2f9103a36331c88981526428cc7"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-selector-parser "^5.0.0"
+
 postcss-calc@^6.0.0:
   version "6.0.2"
   resolved "https://registry.npmjs.org/postcss-calc/-/postcss-calc-6.0.2.tgz#4d9a43e27dbbf27d095fecb021ac6896e2318337"
@@ -3432,6 +3546,13 @@ postcss-color-function@^4.0.0:
     postcss-message-helpers "^2.0.0"
     postcss-value-parser "^3.3.0"
 
+postcss-color-functional-notation@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/postcss-color-functional-notation/-/postcss-color-functional-notation-2.0.1.tgz#5efd37a88fbabeb00a2966d1e53d98ced93f74e0"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
 postcss-color-gray@^4.0.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/postcss-color-gray/-/postcss-color-gray-4.1.0.tgz#e5581ed57eaa826fb652ca11b1e2b7b136a9f9df"
@@ -3441,6 +3562,14 @@ postcss-color-gray@^4.0.0:
     postcss-message-helpers "^2.0.0"
     reduce-function-call "^1.0.2"
 
+postcss-color-gray@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/postcss-color-gray/-/postcss-color-gray-5.0.0.tgz#532a31eb909f8da898ceffe296fdc1f864be8547"
+  dependencies:
+    "@csstools/convert-colors" "^1.4.0"
+    postcss "^7.0.5"
+    postcss-values-parser "^2.0.0"
+
 postcss-color-hex-alpha@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/postcss-color-hex-alpha/-/postcss-color-hex-alpha-3.0.0.tgz#1e53e6c8acb237955e8fd08b7ecdb1b8b8309f95"
@@ -3448,6 +3577,13 @@ postcss-color-hex-alpha@^3.0.0:
     color "^1.0.3"
     postcss "^6.0.1"
     postcss-message-helpers "^2.0.0"
+
+postcss-color-hex-alpha@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.npmjs.org/postcss-color-hex-alpha/-/postcss-color-hex-alpha-5.0.2.tgz#e9b1886bb038daed33f6394168c210b40bb4fdb6"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
 
 postcss-color-hsl@^2.0.0:
   version "2.0.0"
@@ -3466,12 +3602,27 @@ postcss-color-hwb@^3.0.0:
     postcss-message-helpers "^2.0.0"
     reduce-function-call "^1.0.2"
 
+postcss-color-mod-function@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/postcss-color-mod-function/-/postcss-color-mod-function-3.0.3.tgz#816ba145ac11cc3cb6baa905a75a49f903e4d31d"
+  dependencies:
+    "@csstools/convert-colors" "^1.4.0"
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
 postcss-color-rebeccapurple@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/postcss-color-rebeccapurple/-/postcss-color-rebeccapurple-3.1.0.tgz#ce1269ecc2d0d8bf92aab44bd884e633124c33ec"
   dependencies:
     postcss "^6.0.22"
     postcss-values-parser "^1.5.0"
+
+postcss-color-rebeccapurple@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/postcss-color-rebeccapurple/-/postcss-color-rebeccapurple-4.0.1.tgz#c7a89be872bb74e45b1e3022bfe5748823e6de77"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
 
 postcss-color-rgb@^2.0.0:
   version "2.0.0"
@@ -3530,6 +3681,12 @@ postcss-custom-media@^6.0.0:
   dependencies:
     postcss "^6.0.1"
 
+postcss-custom-media@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.npmjs.org/postcss-custom-media/-/postcss-custom-media-7.0.7.tgz#bbc698ed3089ded61aad0f5bfb1fb48bf6969e73"
+  dependencies:
+    postcss "^7.0.5"
+
 postcss-custom-properties@^6.1.0:
   version "6.3.1"
   resolved "https://registry.npmjs.org/postcss-custom-properties/-/postcss-custom-properties-6.3.1.tgz#5c52abde313d7ec9368c4abf67d27a656cba8b39"
@@ -3537,12 +3694,59 @@ postcss-custom-properties@^6.1.0:
     balanced-match "^1.0.0"
     postcss "^6.0.18"
 
+postcss-custom-properties@^8.0.9:
+  version "8.0.9"
+  resolved "https://registry.npmjs.org/postcss-custom-properties/-/postcss-custom-properties-8.0.9.tgz#8943870528a6eae4c8e8d285b6ccc9fd1f97e69c"
+  dependencies:
+    postcss "^7.0.5"
+    postcss-values-parser "^2.0.0"
+
 postcss-custom-selectors@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/postcss-custom-selectors/-/postcss-custom-selectors-4.0.1.tgz#781382f94c52e727ef5ca4776ea2adf49a611382"
   dependencies:
     postcss "^6.0.1"
     postcss-selector-matches "^3.0.0"
+
+postcss-custom-selectors@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.npmjs.org/postcss-custom-selectors/-/postcss-custom-selectors-5.1.2.tgz#64858c6eb2ecff2fb41d0b28c9dd7b3db4de7fba"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-selector-parser "^5.0.0-rc.3"
+
+postcss-dir-pseudo-class@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/postcss-dir-pseudo-class/-/postcss-dir-pseudo-class-5.0.0.tgz#6e3a4177d0edb3abcc85fdb6fbb1c26dabaeaba2"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-selector-parser "^5.0.0-rc.3"
+
+postcss-double-position-gradients@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/postcss-double-position-gradients/-/postcss-double-position-gradients-1.0.0.tgz#fc927d52fddc896cb3a2812ebc5df147e110522e"
+  dependencies:
+    postcss "^7.0.5"
+    postcss-values-parser "^2.0.0"
+
+postcss-env-function@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/postcss-env-function/-/postcss-env-function-2.0.2.tgz#0f3e3d3c57f094a92c2baf4b6241f0b0da5365d7"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
+postcss-focus-visible@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/postcss-focus-visible/-/postcss-focus-visible-4.0.0.tgz#477d107113ade6024b14128317ade2bd1e17046e"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-focus-within@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/postcss-focus-within/-/postcss-focus-within-3.0.0.tgz#763b8788596cee9b874c999201cdde80659ef680"
+  dependencies:
+    postcss "^7.0.2"
 
 postcss-font-family-system-ui@^3.0.0:
   version "3.0.0"
@@ -3556,6 +3760,25 @@ postcss-font-variant@^3.0.0:
   dependencies:
     postcss "^6.0.1"
 
+postcss-font-variant@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/postcss-font-variant/-/postcss-font-variant-4.0.0.tgz#71dd3c6c10a0d846c5eda07803439617bbbabacc"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-gap-properties@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/postcss-gap-properties/-/postcss-gap-properties-2.0.0.tgz#431c192ab3ed96a3c3d09f2ff615960f902c1715"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-image-set-function@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/postcss-image-set-function/-/postcss-image-set-function-3.0.1.tgz#28920a2f29945bed4c3198d7df6496d410d3f288"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
 postcss-image-set-polyfill@^0.3.5:
   version "0.3.5"
   resolved "https://registry.npmjs.org/postcss-image-set-polyfill/-/postcss-image-set-polyfill-0.3.5.tgz#0f193413700cf1f82bd39066ef016d65a4a18181"
@@ -3563,12 +3786,36 @@ postcss-image-set-polyfill@^0.3.5:
     postcss "^6.0.1"
     postcss-media-query-parser "^0.2.3"
 
+postcss-import@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.npmjs.org/postcss-import/-/postcss-import-12.0.1.tgz#cf8c7ab0b5ccab5649024536e565f841928b7153"
+  dependencies:
+    postcss "^7.0.1"
+    postcss-value-parser "^3.2.3"
+    read-cache "^1.0.0"
+    resolve "^1.1.7"
+
 postcss-initial@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/postcss-initial/-/postcss-initial-2.0.0.tgz#72715f7336e0bb79351d99ee65c4a253a8441ba4"
   dependencies:
     lodash.template "^4.2.4"
     postcss "^6.0.1"
+
+postcss-initial@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/postcss-initial/-/postcss-initial-3.0.0.tgz#1772512faf11421b791fb2ca6879df5f68aa0517"
+  dependencies:
+    lodash.template "^4.2.4"
+    postcss "^7.0.2"
+
+postcss-lab-function@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/postcss-lab-function/-/postcss-lab-function-2.0.1.tgz#bb51a6856cd12289ab4ae20db1e3821ef13d7d2e"
+  dependencies:
+    "@csstools/convert-colors" "^1.4.0"
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
 
 postcss-load-config@^2.0.0:
   version "2.0.0"
@@ -3586,11 +3833,23 @@ postcss-loader@^3.0.0:
     postcss-load-config "^2.0.0"
     schema-utils "^1.0.0"
 
+postcss-logical@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/postcss-logical/-/postcss-logical-3.0.0.tgz#2495d0f8b82e9f262725f75f9401b34e7b45d5b5"
+  dependencies:
+    postcss "^7.0.2"
+
 postcss-media-minmax@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/postcss-media-minmax/-/postcss-media-minmax-3.0.0.tgz#675256037a43ef40bc4f0760bfd06d4dc69d48d2"
   dependencies:
     postcss "^6.0.1"
+
+postcss-media-minmax@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/postcss-media-minmax/-/postcss-media-minmax-4.0.0.tgz#b75bb6cbc217c8ac49433e12f22048814a4f5ed5"
+  dependencies:
+    postcss "^7.0.2"
 
 postcss-media-query-parser@^0.2.3:
   version "0.2.3"
@@ -3600,11 +3859,106 @@ postcss-message-helpers@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/postcss-message-helpers/-/postcss-message-helpers-2.0.0.tgz#a4f2f4fab6e4fe002f0aed000478cdf52f9ba60e"
 
+postcss-modules-extract-imports@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz#818719a1ae1da325f9832446b01136eeb493cd7e"
+  dependencies:
+    postcss "^7.0.5"
+
+postcss-modules-local-by-default@^2.0.3:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/postcss-modules-local-by-default/-/postcss-modules-local-by-default-2.0.4.tgz#a000bb07e4f57f412ba35c904d035cfd4a7b9446"
+  dependencies:
+    css-selector-tokenizer "^0.7.0"
+    postcss "^7.0.6"
+    postcss-value-parser "^3.3.1"
+
+postcss-modules-scope@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/postcss-modules-scope/-/postcss-modules-scope-2.0.1.tgz#2c0f2394cde4cd09147db054c68917e38f6d43a4"
+  dependencies:
+    css-selector-tokenizer "^0.7.0"
+    postcss "^7.0.6"
+
+postcss-modules-values@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/postcss-modules-values/-/postcss-modules-values-2.0.0.tgz#479b46dc0c5ca3dc7fa5270851836b9ec7152f64"
+  dependencies:
+    icss-replace-symbols "^1.1.0"
+    postcss "^7.0.6"
+
 postcss-nesting@^4.0.1:
   version "4.2.1"
   resolved "https://registry.npmjs.org/postcss-nesting/-/postcss-nesting-4.2.1.tgz#0483bce338b3f0828ced90ff530b29b98b00300d"
   dependencies:
     postcss "^6.0.11"
+
+postcss-nesting@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/postcss-nesting/-/postcss-nesting-7.0.0.tgz#6e26a770a0c8fcba33782a6b6f350845e1a448f6"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-overflow-shorthand@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/postcss-overflow-shorthand/-/postcss-overflow-shorthand-2.0.0.tgz#31ecf350e9c6f6ddc250a78f0c3e111f32dd4c30"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-page-break@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/postcss-page-break/-/postcss-page-break-2.0.0.tgz#add52d0e0a528cabe6afee8b46e2abb277df46bf"
+  dependencies:
+    postcss "^7.0.2"
+
+postcss-place@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/postcss-place/-/postcss-place-4.0.1.tgz#e9f39d33d2dc584e46ee1db45adb77ca9d1dcc62"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
+postcss-preset-env@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.npmjs.org/postcss-preset-env/-/postcss-preset-env-6.5.0.tgz#a14b8f6e748b2a3a4a02a56f36c390f30073b9e1"
+  dependencies:
+    autoprefixer "^9.4.2"
+    browserslist "^4.3.5"
+    caniuse-lite "^1.0.30000918"
+    css-blank-pseudo "^0.1.4"
+    css-has-pseudo "^0.10.0"
+    css-prefers-color-scheme "^3.1.1"
+    cssdb "^4.3.0"
+    postcss "^7.0.6"
+    postcss-attribute-case-insensitive "^4.0.0"
+    postcss-color-functional-notation "^2.0.1"
+    postcss-color-gray "^5.0.0"
+    postcss-color-hex-alpha "^5.0.2"
+    postcss-color-mod-function "^3.0.3"
+    postcss-color-rebeccapurple "^4.0.1"
+    postcss-custom-media "^7.0.7"
+    postcss-custom-properties "^8.0.9"
+    postcss-custom-selectors "^5.1.2"
+    postcss-dir-pseudo-class "^5.0.0"
+    postcss-double-position-gradients "^1.0.0"
+    postcss-env-function "^2.0.2"
+    postcss-focus-visible "^4.0.0"
+    postcss-focus-within "^3.0.0"
+    postcss-font-variant "^4.0.0"
+    postcss-gap-properties "^2.0.0"
+    postcss-image-set-function "^3.0.1"
+    postcss-initial "^3.0.0"
+    postcss-lab-function "^2.0.1"
+    postcss-logical "^3.0.0"
+    postcss-media-minmax "^4.0.0"
+    postcss-nesting "^7.0.0"
+    postcss-overflow-shorthand "^2.0.0"
+    postcss-page-break "^2.0.0"
+    postcss-place "^4.0.1"
+    postcss-pseudo-class-any-link "^6.0.0"
+    postcss-replace-overflow-wrap "^3.0.0"
+    postcss-selector-matches "^4.0.0"
+    postcss-selector-not "^4.0.0"
 
 postcss-pseudo-class-any-link@^4.0.0:
   version "4.0.0"
@@ -3612,6 +3966,13 @@ postcss-pseudo-class-any-link@^4.0.0:
   dependencies:
     postcss "^6.0.1"
     postcss-selector-parser "^2.2.3"
+
+postcss-pseudo-class-any-link@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npmjs.org/postcss-pseudo-class-any-link/-/postcss-pseudo-class-any-link-6.0.0.tgz#2ed3eed393b3702879dec4a87032b210daeb04d1"
+  dependencies:
+    postcss "^7.0.2"
+    postcss-selector-parser "^5.0.0-rc.3"
 
 postcss-pseudoelements@^5.0.0:
   version "5.0.0"
@@ -3625,6 +3986,12 @@ postcss-replace-overflow-wrap@^2.0.0:
   dependencies:
     postcss "^6.0.1"
 
+postcss-replace-overflow-wrap@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/postcss-replace-overflow-wrap/-/postcss-replace-overflow-wrap-3.0.0.tgz#61b360ffdaedca84c7c918d2b0f0d0ea559ab01c"
+  dependencies:
+    postcss "^7.0.2"
+
 postcss-selector-matches@^3.0.0, postcss-selector-matches@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/postcss-selector-matches/-/postcss-selector-matches-3.0.1.tgz#e5634011e13950881861bbdd58c2d0111ffc96ab"
@@ -3632,12 +3999,26 @@ postcss-selector-matches@^3.0.0, postcss-selector-matches@^3.0.1:
     balanced-match "^0.4.2"
     postcss "^6.0.1"
 
+postcss-selector-matches@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/postcss-selector-matches/-/postcss-selector-matches-4.0.0.tgz#71c8248f917ba2cc93037c9637ee09c64436fcff"
+  dependencies:
+    balanced-match "^1.0.0"
+    postcss "^7.0.2"
+
 postcss-selector-not@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/postcss-selector-not/-/postcss-selector-not-3.0.1.tgz#2e4db2f0965336c01e7cec7db6c60dff767335d9"
   dependencies:
     balanced-match "^0.4.2"
     postcss "^6.0.1"
+
+postcss-selector-not@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/postcss-selector-not/-/postcss-selector-not-4.0.0.tgz#c68ff7ba96527499e832724a2674d65603b645c0"
+  dependencies:
+    balanced-match "^1.0.0"
+    postcss "^7.0.2"
 
 postcss-selector-parser@^2.2.2, postcss-selector-parser@^2.2.3:
   version "2.2.3"
@@ -3647,13 +4028,29 @@ postcss-selector-parser@^2.2.2, postcss-selector-parser@^2.2.3:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
+postcss-selector-parser@^5.0.0, postcss-selector-parser@^5.0.0-rc.3, postcss-selector-parser@^5.0.0-rc.4:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-5.0.0.tgz#249044356697b33b64f1a8f7c80922dddee7195c"
+  dependencies:
+    cssesc "^2.0.0"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0, postcss-value-parser@^3.3.1:
   version "3.3.1"
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz#9ff822547e2893213cf1c30efa51ac5fd1ba8281"
 
 postcss-values-parser@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/postcss-values-parser/-/postcss-values-parser-1.5.0.tgz#5d9fa63e2bcb0179ce48f3235303765eb89f3047"
+  dependencies:
+    flatten "^1.0.2"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-values-parser@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/postcss-values-parser/-/postcss-values-parser-2.0.1.tgz#da8b472d901da1e205b47bdc98637b9e9e550e5f"
   dependencies:
     flatten "^1.0.2"
     indexes-of "^1.0.1"
@@ -3667,7 +4064,7 @@ postcss@^6.0, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.14, 
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.13, postcss@^7.0.2:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.13, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.13"
   resolved "https://registry.npmjs.org/postcss/-/postcss-7.0.13.tgz#42bf716413e8f1c786ab71dc6e722b3671b16708"
   dependencies:
@@ -3909,6 +4306,12 @@ react@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.12.0"
 
+read-cache@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
+  dependencies:
+    pify "^2.3.0"
+
 "readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.6:
   version "2.3.6"
   resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
@@ -4005,12 +4408,20 @@ redux-observable@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/redux-observable/-/redux-observable-1.0.0.tgz#780ff2455493eedcef806616fe286b454fd15d91"
 
+redux-thunk@*, redux-thunk@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
+
 redux@*, "redux@>= 3.7.2", redux@^4.0.0, redux@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   dependencies:
     loose-envify "^1.4.0"
     symbol-observable "^1.2.0"
+
+regenerate@^1.2.1:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
@@ -4026,6 +4437,24 @@ regex-not@^1.0.0, regex-not@^1.0.2:
   dependencies:
     extend-shallow "^3.0.2"
     safe-regex "^1.1.0"
+
+regexpu-core@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/regexpu-core/-/regexpu-core-1.0.0.tgz#86a763f58ee4d7c2f6b102e4764050de7ed90c6b"
+  dependencies:
+    regenerate "^1.2.1"
+    regjsgen "^0.2.0"
+    regjsparser "^0.1.4"
+
+regjsgen@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/regjsgen/-/regjsgen-0.2.0.tgz#6c016adeac554f75823fe37ac05b92d5a4edb1f7"
+
+regjsparser@^0.1.4:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/regjsparser/-/regjsparser-0.1.5.tgz#7ee8f84dc6fa792d3fd0ae228d24bd949ead205c"
+  dependencies:
+    jsesc "~0.5.0"
 
 relateurl@0.2.x:
   version "0.2.7"
@@ -4097,6 +4526,12 @@ resolve-pathname@^2.2.0:
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
+
+resolve@^1.1.7:
+  version "1.9.0"
+  resolved "https://registry.npmjs.org/resolve/-/resolve-1.9.0.tgz#a14c6fdfa8f92a7df1d996cb7105fa744658ea06"
+  dependencies:
+    path-parse "^1.0.6"
 
 ret@~0.1.10:
   version "0.1.15"
@@ -4641,9 +5076,21 @@ ts-loader@^5.3.3:
     micromatch "^3.1.4"
     semver "^5.0.1"
 
-tslib@^1.9.0:
+tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
+
+tslint-react@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.npmjs.org/tslint-react/-/tslint-react-3.6.0.tgz#7f462c95c4a0afaae82507f06517ff02942196a1"
+  dependencies:
+    tsutils "^2.13.1"
+
+tsutils@^2.13.1:
+  version "2.29.0"
+  resolved "https://registry.npmjs.org/tsutils/-/tsutils-2.29.0.tgz#32b488501467acbedd4b85498673a0812aca0b99"
+  dependencies:
+    tslib "^1.8.1"
 
 tty-browserify@0.0.0:
   version "0.0.0"
