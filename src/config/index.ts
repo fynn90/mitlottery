@@ -1,0 +1,1 @@
+export const singleExtractionOfList = [1,2,3,6]; // 单次抽取 select 数据

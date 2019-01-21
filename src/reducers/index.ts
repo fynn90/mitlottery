@@ -2,12 +2,13 @@ import { data as people } from '../people.json';
 import { data as prize } from '../prize.json';
 import { combineReducers } from 'redux';
 import * as constants from '../constants';
+import { singleExtractionOfList} from "../config"
 
 const optionsInitialState = {
   prizeList: prize.concat({ type: '其它', name: 'other', quantity: 1, imgUrl: '' }),
   currentPrize: prize.slice(-1)[0],
-  extractionsList: [1, 2, 3, 6],
-  numberOfExtraction: 6
+  extractionsList: singleExtractionOfList,
+  numberOfExtraction: singleExtractionOfList.slice(-1)[0]
 }
 
 const lotteryPeoplesInitialState = {
