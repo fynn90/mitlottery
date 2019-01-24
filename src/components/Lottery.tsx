@@ -1,9 +1,8 @@
 import React from 'react';
-import { LotteryHeader, LotteryBody} from '../containers'
+import {LotteryBody} from '../containers'
 
 const Lottery = () => (
   <section id="lotteryArea">
-    <LotteryHeader />
     <LotteryBody />
   </section>
 );

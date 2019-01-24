@@ -31,7 +31,7 @@ class SelectExtractionOfNumberContainer extends Component<SelectExtractionNumber
 
 const mapStateToProps = (state: mitLotteryInterface) => ({
   extractionsList: state.optionsReducers.extractionsList,
-  numberOfExtraction: state.optionsReducers.numberOfExtraction
+  numberOfExtraction: state.lotteryReducers.currentPrize.num
 })
 
 export default connect(

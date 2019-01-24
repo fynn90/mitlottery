@@ -31,7 +31,7 @@ class SelectPrizeContainer extends Component<SelectPrizeContainerPropsInterface>
 
 const mapStateToProps = (state: mitLotteryInterface) => ({
   prizeList: state.optionsReducers.prizeList,
-  currentPrize: state.optionsReducers.currentPrize
+  currentPrize: state.lotteryReducers.currentPrize
 });
 
 export default connect(

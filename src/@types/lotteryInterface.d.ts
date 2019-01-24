@@ -11,6 +11,8 @@ interface lotteryPeopleStateInterface {
   extracting: lotteryPeopleInterface[];
   drawList: lotteryPeopleInterface[];
   inTheLottery: boolean;
+  lotteryOrder: lotteryOrderInterface[];
+  currentPrize: currentPrizeInterface;
 }
 /**
  *参与抽奖人员
@@ -22,7 +24,6 @@ interface lotteryPeopleStateInterface {
 interface lotteryPeopleInterface {
   name: string;
   department: string;
-  winner: boolean;
 }
 /**
  *中奖名单

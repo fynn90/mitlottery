@@ -7,9 +7,7 @@
  */
 interface optionStateInterface {
   prizeList: prizeItemInterface[];
-  currentPrize: prizeItemInterface;
   extractionsList: number[];
-  numberOfExtraction: number;
 }
 /**
  *奖品项
@@ -19,10 +17,20 @@ interface optionStateInterface {
  * @interface prizeItemInterface
  */
 interface prizeItemInterface {
+  type: string; // 抽奖类型
+  name: string; // 奖品名称
+  quantity: number; // 奖品数量
+  imgUrl: string; // 奖品图片
+  received: number; // 已领取数量
+}
+
+interface lotteryOrderInterface {
   type: string;
-  name: string;
-  quantity: number;
-  imgUrl: string;
+  num: number;
+}
+
+interface currentPrizeInterface extends prizeItemInterface {
+  num: number; // 每次抽取数量
 }
 
 /**

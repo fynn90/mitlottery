@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { STOP_LOTTERY, START_LOTTERY, IN_THE_LOTTERY } from '../constants';
+import { STOP_LOTTERY, START_LOTTERY, IN_THE_LOTTERY, NEXT_TIME } from '../constants';
 import { getRandomInt } from '../utils';
 var setTimeOutHandle;
 
@@ -30,6 +30,21 @@ export const stopLottery = (max: number, randomQuantity: number, lotteryType: st
   })
 }
 
+export const nextTime = () => (dispatch: Dispatch) => {
+  dispatch({
+    type: NEXT_TIME
+  })
+}
+
+/**
+ * 生成获奖的随机数
+ *
+ * @author Fan
+ * @date 2019-01-24
+ * @param {number} max
+ * @param {number} randomQuantity
+ * @returns {number[]}
+ */
 function generate(max: number, randomQuantity: number):number[] {
   let randomArr:number[] = [];
   for (let i = 0; i < randomQuantity; i++) {

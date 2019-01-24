@@ -610,36 +610,44 @@ top: 0;
 right: 0;
 bottom: 0;
 left: 0;
+background: #ff5e58;
 }
 #mitlottery {
 display: flex;
 flex-flow: column;
 width: 100vw;
 height: 100vh;
+background: url('./assets/lottery-bg.png') no-repeat bottom/100%;
 }
 #header {
 display: flex;
 flex-shrink: 0;
 justify-content: center;
 align-items: center;
-height: 60px;
+height: 290px;
 }
 #main {
 display: flex;
 flex: 1;
 }
 #optionArea {
+    position: absolute;
+    bottom: 300px;
+    left: 10px;
     display: flex;
     flex-shrink: 0;
     flex-flow: column;
     width: 200px;
     padding-left: 10px;
     border: 1px solid blue;
+    z-index: 999;
 }
 #lotteryArea {
+    position: relative;
     display: flex;
     flex-flow: column;
     flex: 1;
+    align-items: center;
     padding: 10px;
 }
 #listOfWinnersArea {
@@ -652,25 +660,35 @@ width: 300px;
 width: 120px;
 }
 .lotteryHeader {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
     display: flex;
-    flex-shrink: 0;
-    justify-content: center;
+    flex-flow: column;
+    align-items: center;
     height: auto;
-    padding: 20px;
+    width: 901px;
+    height: 107px;
+    background: url('./assets/lottery-title-area-bg.png') no-repeat center/100%;
 }
 .lotteryBody {
     display: flex;
     flex: 1;
-    flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 1503px;
+    height: 551px;
+    background: no-repeat url('./assets/lottery-main-bg.png') center/100%;
 }
 .displayPeople_div {
+    position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
-    width: 60%;
-    min-height: 200px;
+    background-color: #ff3a34;
+	border-radius: 10px;
+    padding: 20px 15px;
 }
 .peopleItem {
     display: flex;
@@ -679,9 +697,127 @@ width: 120px;
     justify-content: center;
 }
 .lotteryButton_div {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-top: 20px;
+    left: -120px;
+    bottom : 0;
+}
+.nextButton_div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: -120px;
+    bottom : 0;
+    width: 100px;
+    height: 67.5324px;
+    background: url('./assets/next_btn.png') center/100% no-repeat;
+    cursor: pointer;
+}
+.start_btn,.stop_btn {
+    width: 100px;
+    height: 67.5324px;
+    background: url('./assets/start_btn.png') center/100% no-repeat;
+    cursor: pointer;
+}
+.stop_btn {
+    background: url('./assets/stop_btn.png') center/100% no-repeat;
+}
+.lotteryHeader-title_div {
+    font-size: 42px;
+    color: #ffe1c4;
+    text-shadow: 0px 1px 3px rgba(74, 29, 0, 0.72), 0px 2px 3px rgba(255, 255, 255, 0.58);
+}
+.lotteryHeader-prompt_div {
+    font-size: 21px;
+    color: #ffe1c4;
+}
+.displayPeople_div > div.item6 {
+    display: flex;
+    flex-flow: column;
+    width: 134px;
+    height: 254px;
+    border-radius: 10px;
+    padding-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #680000;
+}
+.displayPeople_div > div.item6 >div.lotteryItem-department_div {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    font-size: 21px;
+}
+.displayPeople_div > div.item6 >div.lotteryItem-name {
+    display: flex;
+    flex: 1;
+    margin-top: 30px;
+    align-items: center;
+    font-size: 41px;
+    writing-mode:vertical-rl;
+}
+
+.displayPeople_div > div.item3 {
+    display: flex;
+    flex-flow: column;
+    width: 267px;
+    height: 254px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #680000;
+}
+.displayPeople_div > div.item3 >div.lotteryItem-department_div {
+    font-size: 34px;
+    text-align: center;
+}
+.displayPeople_div > div.item3 >div.lotteryItem-name {
+    font-size: 58px;
+    /* margin-top: 20px; */
+    text-align: center;
+}
+.displayPeople_div > div.item2 {
+    display: flex;
+    flex-flow: column;
+    width: 414px;
+    height: 254px;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #680000;
+}
+.displayPeople_div > div.item2 >div.lotteryItem-department_div {
+    font-size: 50px;
+    margin-top: 35px;
+    line-height: 1;
+    text-align: center;
+}
+.displayPeople_div > div.item2 >div.lotteryItem-name {
+    font-size: 85.5px;
+    text-align: center;
+}
+.displayPeople_div > div.item1 {
+    display: flex;
+    flex-flow: column;
+    width: 197px;
+    height: 254px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #680000;
+}
+.displayPeople_div > div.item1 >div.lotteryItem-department_div {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+}
+.displayPeople_div > div.item1 >div.lotteryItem-name {
+    font-size: 132px;
+    text-align: center;
 }
