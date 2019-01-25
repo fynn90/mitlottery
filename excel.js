@@ -15,7 +15,8 @@ const dictionary = {
   "奖品类型": 'type',
   "奖品名称": 'name',
   "奖品数量": 'quantity',
-  "奖品图片地址": 'imgUrl'
+  "奖品图片地址": 'remoteImgUrl',
+  "本地图片地址": 'imgUrl',
 }
 for(let i = 0, l = xlsxPeoples.length; i < l; i++) {
   let department = xlsxPeoples[i];
@@ -62,6 +63,8 @@ for(let i = 0, l = xlsxPeoples.length; i < l; i++) {
   }
   console.log(lotteryOrder)
 }
+console.log('参与抽奖人数:', peopleList.length)
+console.log(peopleList)
 
 fs.writeFileSync(path.join(__dirname,'src/people.json'), JSON.stringify({data: peopleList}));
 fs.writeFileSync(path.join(__dirname, 'src/prize.json'), JSON.stringify({ data: prize}));

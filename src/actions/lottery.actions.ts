@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { STOP_LOTTERY, START_LOTTERY, IN_THE_LOTTERY, NEXT_TIME } from '../constants';
+import { STOP_LOTTERY, START_LOTTERY, IN_THE_LOTTERY, NEXT_TIME, UPDATE_PRIZE_RECEIVED_NUMBER } from '../constants';
 import { getRandomInt } from '../utils';
 var setTimeOutHandle;
 
@@ -17,22 +17,28 @@ const inTheLottery = (dispatch: Dispatch, max: number, randomQuantity: number) =
       type: IN_THE_LOTTERY,
       randoms: randomNumbers
     })
-  }, 100)
+  }, 50)
 };
 
-export const stopLottery = (max: number, randomQuantity: number, lotteryType: string) => (dispatch, Dispatch) => {
+export const stopLottery = (max: number, randomQuantity: number, prizeType: string) => (dispatch, Dispatch) => {
   clearInterval(setTimeOutHandle);
   let randomNumbers = generate(max, randomQuantity);
   dispatch({
     type: STOP_LOTTERY,
     randoms: randomNumbers,
-    lotteryType
-  })
+    prizeType
+  });
+  dispatch({
+    type: UPDATE_PRIZE_RECEIVED_NUMBER,
+    number: randomQuantity,
+    prizeType
+  });
 }
 
-export const nextTime = () => (dispatch: Dispatch) => {
+export const nextTime = (prizeList: prizeItemInterface[]) => (dispatch: Dispatch) => {
   dispatch({
-    type: NEXT_TIME
+    type: NEXT_TIME,
+    prizeList
   })
 }
 

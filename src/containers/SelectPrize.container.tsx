@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { switchPrize } from '../actions'
-
+import { switchPrize, otherPrize } from '../actions'
+import { PRIZE_OTHER } from '../constants';
 interface SelectPrizeContainerPropsInterface {
   prizeList: prizeItemInterface[];
-  currentPrize: prizeItemInterface;
-  switchPrize(prizeType: string): void;
+  numberOfExtraction: number;
+  prizeType: string;
+  inTheLottery: boolean;
+  switchPrize(prizeType: string, number: number, prizeList: prizeItemInterface[]): void;
+  otherPrize(prizeType: string, number: number, ): void;
 }
 
 class SelectPrizeContainer extends Component<SelectPrizeContainerPropsInterface> {
   constructor(props: SelectPrizeContainerPropsInterface) {
     super(props)
   }
-  dropdownChanged (e) {
-    this.props.switchPrize(e.target.value);
+  dropdownChanged(e) {
+    if (e.target.value !== PRIZE_OTHER) {
+      this.props.switchPrize(e.target.value, this.props.numberOfExtraction, this.props.prizeList);
+    } else {
+      let name = prompt(`请输入${PRIZE_OTHER}奖品名：`);
+      if (name) {
+        this.props.otherPrize(name, this.props.numberOfExtraction,)
+      }
+    }
   }
   render() {
     return (
       <div className="selectPrize">
         <div>本轮奖项：</div>
-        <select className="selectClass" value={this.props.currentPrize.type} onChange={this.dropdownChanged.bind(this)}>
+        <select className="selectClass" value={this.props.prizeType} onChange={this.dropdownChanged.bind(this)} disabled={this.props.inTheLottery}>
           {this.props.prizeList.map((val, index) => (
-            < option value={val.type} key={index}> {val.type}({val.quantity})</option >
+            < option value={val.type} key={index}>{val.type}</option >
           ))}
         </select>
       </div>
@@ -31,10 +41,12 @@ class SelectPrizeContainer extends Component<SelectPrizeContainerPropsInterface>
 
 const mapStateToProps = (state: mitLotteryInterface) => ({
   prizeList: state.optionsReducers.prizeList,
-  currentPrize: state.lotteryReducers.currentPrize
+  numberOfExtraction: state.lotteryReducers.currentPrize.num,
+  prizeType: state.lotteryReducers.currentPrize.type,
+  inTheLottery: state.lotteryReducers.inTheLottery
 });
 
 export default connect(
   mapStateToProps,
-  { switchPrize }
+  { switchPrize, otherPrize }
 )(SelectPrizeContainer)

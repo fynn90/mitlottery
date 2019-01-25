@@ -6,7 +6,7 @@
   "author": "Fynn <fynn.90@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --inline --hot --color",
+    "start": "node excel.js && cross-env NODE_ENV=development webpack-dev-server --mode development --inline --hot --color",
     "build": "cross-env NODE_ENV=production webpack --mode production ",
     "test": "jest"
   },

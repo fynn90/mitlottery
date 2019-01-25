@@ -46,5 +46,7 @@ interface winnerListInterface {
 interface lotteryPeopleActions {
   type: string;
   randoms: number[];
-  lotteryType: string;
+  prizeType: string;
+  number: number;
+  prizeList: prizeItemInterface[];
 }

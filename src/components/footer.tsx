@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { PRIZE_IMG_TO_CLASS_NAME} from '../constants'
 
-const Header = () => (
-  <header id="header">
-    头部信息
-  </header>
-);
-
-export default Header;
+interface FooterInterface {
+  currentPrize: currentPrizeInterface
+}
+class Footer extends Component<FooterInterface> {
+  render() {
+    let imgName = PRIZE_IMG_TO_CLASS_NAME[this.props.currentPrize.type]
+    return (
+      <div id="footer">
+        <div className="lamplight"></div>
+        <div className={imgName}></div>
+      </div>
+    )
+  }
+}
+const mapStateToProps = (state: mitLotteryInterface) => ({
+  currentPrize: state.lotteryReducers.currentPrize,
+})
+export default connect(
+  mapStateToProps,
+  {}
+)(Footer)

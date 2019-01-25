@@ -10,9 +10,10 @@ interface LotteryBodyContainerPropsInterface {
   inTheLottery: boolean;
   nextBtnStatus: boolean;
   lotteryBtnStatus: boolean;
+  prizeList: prizeItemInterface[];
   startLottery(max: number, randomQuantity: number): void;
   stopLottery(max: number, randomQuantity: number, lotteryType: string): void;
-  nextTime(): void;
+  nextTime(prizeList: prizeItemInterface[]): void;
 }
 
 class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface> {
@@ -30,7 +31,7 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface>
     this.props.stopLottery(this.props.drawListLength - 1, this.props.currentPrize.num, this.props.currentPrize.type)
   }
   nextTime = (e) => {
-    this.props.nextTime()
+    this.props.nextTime(this.props.prizeList)
   }
   render() {
     var lotteryItem: any = [];
@@ -67,7 +68,7 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface>
         ]
       }
     } else {
-      let emptyItemStyle = { backgroundColor: '#6b0505' }
+      let emptyItemStyle = { backgroundColor: '#6b0505' };
       if (this.props.currentPrize.num !== 1) {
         for (let i = 0; i < this.props.currentPrize.num; i++) {
           lotteryItem.push(<div key={i} className={lotteryItemClass} style={emptyItemStyle}></div>)
@@ -99,6 +100,7 @@ const mapStateToProps = (state: mitLotteryInterface) => ({
   extracting: state.lotteryReducers.extracting, // 实时抽取的人数
   drawListLength: state.lotteryReducers.drawList.length, // 待抽名单
   inTheLottery: state.lotteryReducers.inTheLottery, // 抽奖中状态
+  prizeList: state.optionsReducers.prizeList,
   nextBtnStatus: !!state.lotteryReducers.lotteryOrder.length && !state.lotteryReducers.inTheLottery && !!state.lotteryReducers.extracting.length,
   lotteryBtnStatus: (!!state.lotteryReducers.extracting.length && state.lotteryReducers.inTheLottery) || (!state.lotteryReducers.inTheLottery && !state.lotteryReducers.extracting.length)
 })

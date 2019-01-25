@@ -619,7 +619,8 @@ width: 100vw;
 height: 100vh;
 background: url('./assets/lottery-bg.png') no-repeat bottom/100%;
 }
-#header {
+#footer {
+position: relative;
 display: flex;
 flex-shrink: 0;
 justify-content: center;
@@ -632,15 +633,29 @@ flex: 1;
 }
 #optionArea {
     position: absolute;
-    bottom: 300px;
-    left: 10px;
+    top: 0;
+    left: 5px;
     display: flex;
-    flex-shrink: 0;
     flex-flow: column;
+    flex-shrink: 0;
     width: 200px;
     padding-left: 10px;
-    border: 1px solid blue;
     z-index: 999;
+}
+.selectPrize {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 8px;
+    color: #ffe1c4e0;
+}
+.selectPrize  > div {
+    display:inline-block;
+}
+.selectPrize  > select {
+    display: inline-block;
+    background: #ff5e58;
+    color: #ffe1c4;
+    border-color: #ffe1c4;
 }
 #lotteryArea {
     position: relative;
@@ -655,9 +670,6 @@ display: flex;
 flex-shrink: 0;
 flex-flow: column;
 width: 300px;
-}
-.selectClass {
-width: 120px;
 }
 .lotteryHeader {
     position: absolute;
@@ -820,4 +832,43 @@ width: 120px;
 .displayPeople_div > div.item1 >div.lotteryItem-name {
     font-size: 132px;
     text-align: center;
+}
+.lamplight {
+    position: absolute;
+    bottom: 70px;
+    width: 608px;
+    height: 607px;
+    background: url('./assets/lamplight.png') center/100% no-repeat;
+}
+.toothbrush_img {
+    position: absolute;
+    top: -130px;
+    width: 230px;
+    height: 338px;
+    background-image: url('./assets/toothbrush.png');
+    background-size: 100%;
+}
+.kindle_img{
+    position: absolute;
+    top: -100px;
+    width: 240px;
+    height: 319px;
+    background-image: url('./assets/kindle.png');
+    background-size: 100%;
+}
+.applewatch_img {
+    position: absolute;
+    top: -80px;
+    width: 234px;
+    height: 292px;
+    background-image: url('./assets/applewatch.png');
+    background-size: 100%;
+}
+.iphoneXMax512_img {
+    position: absolute;
+    top: -140px;
+    width: 225px;
+    height: 354px;
+    background-image: url('./assets/iphoneXMax512.png');
+    background-size: 100%;
 }

@@ -22,6 +22,7 @@ interface prizeItemInterface {
   quantity: number; // 奖品数量
   imgUrl: string; // 奖品图片
   received: number; // 已领取数量
+  remoteImgUrl: string;
 }
 
 interface lotteryOrderInterface {
