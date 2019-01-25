@@ -662,6 +662,7 @@ flex: 1;
     display: flex;
     flex-flow: column;
     flex: 1;
+    justify-content: center;
     align-items: center;
     padding: 10px;
 }
@@ -674,7 +675,7 @@ width: 300px;
 .lotteryHeader {
     position: absolute;
     left: 50%;
-    top: 100px;
+    top: 0px;
     transform: translateX(-50%);
     display: flex;
     flex-flow: column;
@@ -685,8 +686,8 @@ width: 300px;
     background: url('./assets/lottery-title-area-bg.png') no-repeat center/100%;
 }
 .lotteryBody {
+    position: relative;
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
     width: 1503px;
@@ -870,5 +871,13 @@ width: 300px;
     width: 225px;
     height: 354px;
     background-image: url('./assets/iphoneXMax512.png');
+    background-size: 100%;
+}
+.otherPrize_img {
+    position: absolute;
+    top: 5px;
+    width: 200px;
+    height: 200px;
+    background-image: url('./assets/1cc47cd8faee4f599ee39a6d32b7ff15.jpeg');
     background-size: 100%;
 }

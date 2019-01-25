@@ -10,5 +10,6 @@ export const PRIZE_IMG_TO_CLASS_NAME = {
   '一等奖': 'iphoneXMax512_img',
   '二等奖': 'applewatch_img',
   '三等奖': 'kindle_img',
-  '幸运奖': 'toothbrush_img'
+  '幸运奖': 'toothbrush_img',
+  '神秘惊喜大奖': 'otherPrize_img'
 }
