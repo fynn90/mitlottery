@@ -926,3 +926,24 @@ width: 300px;
     opacity: 1;
     transition: all .25s ease;
 }
+.music-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: url(./assets/music.png) no-repeat center center;
+    background-size: contain;
+    animation: rotateMusic 1.2s linear infinite;
+}
+div.music-stop > div{
+    animation-play-state: paused;
+}
+@keyframes rotateMusic{
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+}

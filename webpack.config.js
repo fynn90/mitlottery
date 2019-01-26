@@ -48,7 +48,15 @@ module.exports = {
         limit: 1000,
         name: '[name].[ext]'
       }
-    }
+    },
+    {
+      test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: '[name].[ext]'
+      }
+    },
     ]
   },
   plugins: [

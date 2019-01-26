@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { findDOMNode} from 'react-dom';
 import { connect } from 'react-redux';
 import { startLottery, stopLottery, nextTime } from '../actions'
 import { LotteryTitle } from '.'
+const music = require('../assets/shiji.mp3')
 import classnames from 'classnames';
 interface LotteryBodyContainerPropsInterface {
   currentPrize: currentPrizeInterface;
@@ -16,9 +18,18 @@ interface LotteryBodyContainerPropsInterface {
   nextTime(prizeList: prizeItemInterface[]): void;
 }
 
-class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface> {
+interface LotteryBodyContainerStateInterface {
+  playMusic: boolean;
+  playMusicNow: boolean;
+}
+
+class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface, LotteryBodyContainerStateInterface> {
   constructor(props: LotteryBodyContainerPropsInterface) {
     super(props)
+    this.state = {
+      playMusic: true,
+      playMusicNow: false
+    }
   }
   startLottery = (e) => {
     if (this.props.currentPrize.num > this.props.drawListLength) {
@@ -33,6 +44,38 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface>
   nextTime = (e) => {
     this.props.nextTime(this.props.prizeList)
   }
+  toggleMusic = (e)=> {
+    let audio = findDOMNode(this.refs.music) as HTMLAudioElement;
+    if (this.state.playMusic) {
+      this.setState({
+        playMusic: false,
+        playMusicNow: false
+      })
+      audio.pause()
+    } else {
+      audio.play()
+      this.setState({
+        playMusic: true,
+        playMusicNow: true
+      })
+    }
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.inTheLottery !== prevProps.inTheLottery) {
+      let audio = findDOMNode(this.refs.music) as HTMLAudioElement;
+      if (this.props.inTheLottery && this.state.playMusic) {
+        this.setState({
+          playMusicNow: true
+        });
+        audio.play();
+      } else {
+        this.setState({
+          playMusicNow: false
+        });
+        audio.pause()
+      }
+    }
+  }
   render() {
     var lotteryItem: any = [];
     var lotteryItemClass = classnames({
@@ -40,6 +83,9 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface>
       item2: this.props.currentPrize.num === 2,
       item3: this.props.currentPrize.num === 3,
       item6: this.props.currentPrize.num === 6,
+    });
+    let musicStop = classnames({
+      "music-stop": !this.state.playMusicNow
     })
     if (this.props.extracting.length) {
       let lotteryItemStyle = { backgroundColor: '#ffd1ad' }
@@ -81,6 +127,13 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface>
     }
     return (
       <div className="lotteryBody">
+        <div onClick={this.toggleMusic} className={musicStop}>
+          <div className="music-btn"></div>
+          <audio ref='music' preload="auto">
+            <source src={music} type="audio/mpeg" />
+            您的浏览器不支持 audio 标签。
+          </audio>
+        </div>
         <LotteryTitle />
         <div className="displayPeople_div">
           {this.props.lotteryBtnStatus ? <div className="lotteryButton_div">
