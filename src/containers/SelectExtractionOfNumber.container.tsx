@@ -20,10 +20,7 @@ class SelectExtractionOfNumberContainer extends Component<SelectExtractionNumber
     if (this.props.prizeType !== PRIZE_OTHER) {
       this.props.switchExtractionOfNumber(this.props.prizeType, +e.target.value, this.props.prizeList);
     } else {
-      let name = prompt(`请输入${PRIZE_OTHER}奖品名：`);
-      if (name) {
-        this.props.otherPrize(name, this.props.numberOfExtraction)
-      }
+      this.props.otherPrize(this.props.prizeType, +e.target.value)
     }
   }
   render () {
