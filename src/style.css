@@ -4,6 +4,9 @@
 HTML5 display definitions
 ========================================================================== */
 html {
+font-size: 100%; /* 1 */
+-webkit-text-size-adjust: 100%; /* 2 */
+-ms-text-size-adjust: 100%; /* 2 */
 -webkit-text-size-adjust: 100%;
 -ms-text-size-adjust: 100%;
 -ms-touch-action: none;
@@ -68,6 +71,29 @@ padding: 0 0;
 }
 img {
 vertical-align: middle;
+}
+@media screen and (min-width:320px) and (max-width:359px) {
+    html {
+        font-size: 50px;
+    }
+}
+@media screen and (min-width:1500px) {
+    html {
+    font-size: 16px;
+    }
+    body {
+    max-width: 640px !important;
+    margin: 0px auto !important;
+    }
+}
+@media screen and (max-width:1500px) {
+    html {
+    font-size: 8px;
+    }
+    body {
+    max-width: 640px !important;
+    margin: 0px auto !important;
+    }
 }
 /**
 * Prevent modern browsers from displaying `audio` without controls.
@@ -139,12 +165,6 @@ Base
 * 2. Prevent iOS text size adjust after orientation change, without disabling
 *    user zoom.
 */
-
-html {
-font-size: 100%; /* 1 */
--webkit-text-size-adjust: 100%; /* 2 */
--ms-text-size-adjust: 100%; /* 2 */
-}
 
 /**
 * Address `font-family` inconsistency between `textarea` and other form
