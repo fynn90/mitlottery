@@ -1,5 +1,5 @@
-# mitlottery
-年会抽奖WebApp
+# 年会抽奖WebApp
+只有参与年会的同学才能参与抽奖，Boss们不参与抽奖！
 ## 项目初始化
 项目依赖 node.js，启动项目前需要在本地安装node.js。
 ```bash
