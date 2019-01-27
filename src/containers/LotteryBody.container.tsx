@@ -51,9 +51,11 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface,
         playMusic: false,
         playMusicNow: false
       })
-      audio.pause()
+      audio.pause();
+      audio.currentTime = 0;
     } else {
-      audio.play()
+      audio.currentTime = 0;
+      audio.play();
       this.setState({
         playMusic: true,
         playMusicNow: true
@@ -67,12 +69,14 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface,
         this.setState({
           playMusicNow: true
         });
+        audio.currentTime = 0;
         audio.play();
       } else {
         this.setState({
           playMusicNow: false
         });
-        audio.pause()
+        audio.pause();
+        audio.currentTime = 0;
       }
     }
   }
