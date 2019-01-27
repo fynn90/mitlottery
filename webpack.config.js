@@ -82,7 +82,7 @@ module.exports = {
     historyApiFallback: true,
     compress: true,
     open: true,
-    port: 6688,
+    port: 6982,
     publicPath: "/"
   }
 }
