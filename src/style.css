@@ -95,6 +95,15 @@ vertical-align: middle;
     margin: 0px auto !important;
     }
 }
+@media screen and (max-width:1024px) {
+    html {
+    font-size: 8px;
+    }
+    body {
+    max-width: 640px !important;
+    margin: 0px auto !important;
+    }
+}
 /**
 * Prevent modern browsers from displaying `audio` without controls.
 * Remove excess height in iOS 5 devices.

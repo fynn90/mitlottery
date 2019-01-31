@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { findDOMNode} from 'react-dom';
+import { findDOMNode } from 'react-dom';
 import { connect } from 'react-redux';
 import { startLottery, stopLottery, nextTime } from '../actions'
 import { LotteryTitle } from '.'
@@ -31,20 +31,20 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface,
       playMusicNow: false
     }
   }
-  startLottery = (e) => {
+  startLottery = () => {
     if (this.props.currentPrize.num > this.props.drawListLength) {
       alert("待抽人数必须大于抽奖人数");
       return;
     }
     this.props.startLottery(this.props.drawListLength - 1, this.props.currentPrize.num)
   }
-  stopLottery = (e) => {
+  stopLottery = () => {
     this.props.stopLottery(this.props.drawListLength - 1, this.props.currentPrize.num, this.props.currentPrize.type)
   }
-  nextTime = (e) => {
+  nextTime = () => {
     this.props.nextTime(this.props.prizeList)
   }
-  toggleMusic = (e)=> {
+  toggleMusic = (e) => {
     let audio = findDOMNode(this.refs.music) as HTMLAudioElement;
     if (this.state.playMusic) {
       this.setState({
@@ -80,6 +80,26 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface,
       }
     }
   }
+  listenerKeydown = (e) => {
+    if (e.keyCode === 32) {
+      if (!this.props.inTheLottery && this.props.extracting.length === 0) {
+        // 抽奖按钮
+        this.startLottery()
+      } else if (this.props.inTheLottery) {
+        // 暂停按钮
+        this.stopLottery()
+      } else if (this.props.nextBtnStatus) {
+        // 下一轮按钮
+        this.nextTime()
+      }
+    }
+  }
+  componentDidMount() {
+    window.addEventListener('keydown', this.listenerKeydown)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.listenerKeydown)
+  }
   render() {
     var lotteryItem: any = [];
     var lotteryItemClass = classnames({
@@ -106,13 +126,13 @@ class LotteryBodyContainer extends Component<LotteryBodyContainerPropsInterface,
           <div key={0} className={lotteryItemClass} style={lotteryItemStyle}>
             <div className="lotteryItem-department_div">{this.props.extracting[0].department}</div>
           </div>,
-          <div key={1}  className={lotteryItemClass} style={lotteryItemStyle}>
+          <div key={1} className={lotteryItemClass} style={lotteryItemStyle}>
             <div className="lotteryItem-name">{nameArr[0]}</div>
           </div>,
-          <div key={2}  className={lotteryItemClass} style={lotteryItemStyle}>
+          <div key={2} className={lotteryItemClass} style={lotteryItemStyle}>
             <div className="lotteryItem-name">{nameArr[1]}</div>
           </div>,
-          <div key={3}  className={lotteryItemClass} style={lotteryItemStyle}>
+          <div key={3} className={lotteryItemClass} style={lotteryItemStyle}>
             <div className="lotteryItem-name">{nameArr[2]}</div>
           </div>
         ]
